@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C1810;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#8B4513;stop-opacity:1"/>
+    </linearGradient>
+    <!-- Sun/Moon orb -->
+    <radialGradient id="orb" cx="75%" cy="25%" r="30%">
+      <stop offset="0%" style="stop-color:#E8B96A;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#2C1810;stop-opacity:0"/>
+    </radialGradient>
+    <!-- Texture overlay -->
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feBlend in="SourceGraphic" mode="overlay" result="noised"/>
+      <feComposite in="noised" in2="SourceGraphic" operator="in"/>
+    </filter>
+  </defs>
+  <!-- Background gradient -->
+  <rect width="900" height="600" fill="url(#bg)"/>
+  <!-- Orb glow -->
+  <rect width="900" height="600" fill="url(#orb)"/>
+  <!-- Ground / horizon line -->
+  <path d="M0 372 Q270 348 540 384 Q720 408 900 360 L900 600 L0 600 Z" fill="#8B4513" opacity="0.45"/>
+  <!-- Acacia tree left -->
+  <g opacity="0.55">
+    <rect x="72" y="270" width="6" height="150" fill="#1A1A18"/>
+    <ellipse cx="74" cy="252" rx="55" ry="22" fill="#1A1A18"/>
+    <ellipse cx="63" cy="264" rx="35" ry="15" fill="#1A1A18"/>
+    <ellipse cx="90" cy="258" rx="38" ry="14" fill="#1A1A18"/>
+  </g>
+  <!-- Acacia tree right -->
+  <g opacity="0.45">
+    <rect x="792" y="300" width="5" height="120" fill="#1A1A18"/>
+    <ellipse cx="793" cy="282" rx="44" ry="18" fill="#1A1A18"/>
+    <ellipse cx="783" cy="294" rx="28" ry="12" fill="#1A1A18"/>
+    <ellipse cx="810" cy="288" rx="30" ry="11" fill="#1A1A18"/>
+  </g>
+  <!-- Sun -->
+  <circle cx="675" cy="132" r="48" fill="#E8B96A" opacity="0.75"/>
+  <circle cx="675" cy="132" r="36" fill="#F2C96A" opacity="0.9"/>
+  <!-- Small wildlife silhouettes -->
+  <ellipse cx="405" cy="372" rx="18" ry="9" fill="#1A1A18" opacity="0.5"/>
+  <circle cx="405" cy="360" r="7" fill="#1A1A18" opacity="0.5"/>
+  <ellipse cx="450" cy="378" rx="16" ry="8" fill="#1A1A18" opacity="0.45"/>
+  <circle cx="450" cy="366" r="6" fill="#1A1A18" opacity="0.45"/>
+  <!-- Overlay vignette -->
+  <radialGradient id="vig" cx="50%" cy="50%" r="70%">
+    <stop offset="0%" style="stop-color:#2C1810;stop-opacity:0"/>
+    <stop offset="100%" style="stop-color:#000000;stop-opacity:0.45"/>
+  </radialGradient>
+  <rect width="900" height="600" fill="url(#vig)"/>
+  <!-- Icon -->
+  <text x="50%" y="240" text-anchor="middle" font-size="60" fill="#FAF7F0" opacity="0.85">🦌</text>
+  <!-- Title -->
+  <text x="50%" y="468" text-anchor="middle" font-family="Georgia, serif" font-size="39" font-weight="300" fill="#FAF7F0" letter-spacing="3">The Great Migration Safari</text>
+  <!-- Subtitle -->
+  <text x="50%" y="528" text-anchor="middle" font-family="Georgia, serif" font-size="19" font-style="italic" fill="#FAF7F0" opacity="0.72">10 Days · Tanzania & Kenya</text>
+  <!-- Decorative line -->
+  <line x1="315" y1="491" x2="585" y2="491" stroke="#FAF7F0" stroke-width="1" opacity="0.4"/>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A1206;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#3D2A0E;stop-opacity:1"/>
+    </linearGradient>
+    <!-- Sun/Moon orb -->
+    <radialGradient id="orb" cx="75%" cy="25%" r="30%">
+      <stop offset="0%" style="stop-color:#E8B96A;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#1A1206;stop-opacity:0"/>
+    </radialGradient>
+    <!-- Texture overlay -->
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feBlend in="SourceGraphic" mode="overlay" result="noised"/>
+      <feComposite in="noised" in2="SourceGraphic" operator="in"/>
+    </filter>
+  </defs>
+  <!-- Background gradient -->
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <!-- Orb glow -->
+  <rect width="1200" height="800" fill="url(#orb)"/>
+  <!-- Ground / horizon line -->
+  <path d="M0 496 Q360 463 720 512 Q960 544 1200 480 L1200 800 L0 800 Z" fill="#3D2A0E" opacity="0.45"/>
+  <!-- Acacia tree left -->
+  <g opacity="0.55">
+    <rect x="96" y="360" width="6" height="200" fill="#1A1A18"/>
+    <ellipse cx="99" cy="336" rx="55" ry="22" fill="#1A1A18"/>
+    <ellipse cx="84" cy="352" rx="35" ry="15" fill="#1A1A18"/>
+    <ellipse cx="120" cy="344" rx="38" ry="14" fill="#1A1A18"/>
+  </g>
+  <!-- Acacia tree right -->
+  <g opacity="0.45">
+    <rect x="1056" y="400" width="5" height="160" fill="#1A1A18"/>
+    <ellipse cx="1058" cy="376" rx="44" ry="18" fill="#1A1A18"/>
+    <ellipse cx="1044" cy="392" rx="28" ry="12" fill="#1A1A18"/>
+    <ellipse cx="1080" cy="384" rx="30" ry="11" fill="#1A1A18"/>
+  </g>
+  <!-- Sun -->
+  <circle cx="900" cy="176" r="48" fill="#E8B96A" opacity="0.75"/>
+  <circle cx="900" cy="176" r="36" fill="#F2C96A" opacity="0.9"/>
+  <!-- Small wildlife silhouettes -->
+  <ellipse cx="540" cy="496" rx="18" ry="9" fill="#1A1A18" opacity="0.5"/>
+  <circle cx="540" cy="480" r="7" fill="#1A1A18" opacity="0.5"/>
+  <ellipse cx="600" cy="504" rx="16" ry="8" fill="#1A1A18" opacity="0.45"/>
+  <circle cx="600" cy="488" r="6" fill="#1A1A18" opacity="0.45"/>
+  <!-- Overlay vignette -->
+  <radialGradient id="vig" cx="50%" cy="50%" r="70%">
+    <stop offset="0%" style="stop-color:#1A1206;stop-opacity:0"/>
+    <stop offset="100%" style="stop-color:#000000;stop-opacity:0.45"/>
+  </radialGradient>
+  <rect width="1200" height="800" fill="url(#vig)"/>
+  <!-- Icon -->
+  <text x="50%" y="320" text-anchor="middle" font-size="80" fill="#FAF7F0" opacity="0.85">🗺</text>
+  <!-- Title -->
+  <text x="50%" y="624" text-anchor="middle" font-family="Georgia, serif" font-size="52" font-weight="300" fill="#FAF7F0" letter-spacing="3">Our Destinations</text>
+  <!-- Subtitle -->
+  <text x="50%" y="704" text-anchor="middle" font-family="Georgia, serif" font-size="25" font-style="italic" fill="#FAF7F0" opacity="0.72">Six Extraordinary African Experiences</text>
+  <!-- Decorative line -->
+  <line x1="420" y1="656" x2="780" y2="656" stroke="#FAF7F0" stroke-width="1" opacity="0.4"/>
+</svg>

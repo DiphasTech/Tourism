@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Safari | Summit Horizons Travel</title>
+  <meta name="description" content="Complete our detailed booking enquiry form to begin planning your personalised African safari with Summit Horizons Travel." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo">Summit Horizons<span>Travel &amp; Safaris</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks" role="menubar">
+      <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+      <li role="none"><a href="destinations.html" role="menuitem">Destinations</a></li>
+      <li role="none"><a href="packages.html" role="menuitem">Packages</a></li>
+      <li role="none"><a href="gallery.html" role="menuitem">Gallery</a></li>
+      <li role="none"><a href="about.html" role="menuitem">About</a></li>
+      <li role="none"><a href="booking.html" class="nav-book-btn active" role="menuitem">Book Now</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" style="height:50vh;" aria-label="Booking page hero">
+    <div class="page-hero-bg" style="background-image:url('images/booking-hero.svg');" role="img" aria-label="Safari jeep at dawn in the Serengeti"></div>
+    <div class="page-hero-content">
+      <p class="section-label">Start Your Journey</p>
+      <h1 class="section-title">Safari <em>Booking Enquiry</em></h1>
+    </div>
+  </section>
+
+  <!-- BOOKING FORM -->
+  <main>
+    <section class="booking-section" aria-labelledby="booking-heading">
+      <div class="booking-intro">
+        <p class="section-label">Enquiry Form</p>
+        <h2 class="section-title" id="booking-heading">Tell Us About Your <em>Dream Safari</em></h2>
+        <p class="section-subtitle">Fill in the details below and one of our specialist consultants will prepare a personalised itinerary within 48 hours. All fields marked with an asterisk (*) are required.</p>
+      </div>
+
+      <div class="booking-form" role="main">
+        <form id="bookingForm" novalidate>
+
+          <!-- PERSONAL DETAILS -->
+          <fieldset class="form-fieldset">
+            <legend>Personal Details</legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" name="fullName" placeholder="e.g. Jane Nakato" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="jane@example.com" required autocomplete="email" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="+256 700 000 000" required autocomplete="tel" />
+              </div>
+              <div class="form-group">
+                <label for="country">Country of Residence</label>
+                <input type="text" id="country" name="country" placeholder="e.g. Uganda" autocomplete="country-name" />
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- TRIP PREFERENCES -->
+          <fieldset class="form-fieldset">
+            <legend>Trip Preferences</legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="destination">Destination of Interest *</label>
+                <select id="destination" name="destination" required>
+                  <option value="" disabled selected>— Select a destination —</option>
+                  <option value="serengeti">Serengeti National Park, Tanzania</option>
+                  <option value="okavango">Okavango Delta, Botswana</option>
+                  <option value="bwindi">Bwindi Impenetrable Forest, Uganda</option>
+                  <option value="masai-mara">Masai Mara Reserve, Kenya</option>
+                  <option value="volcanoes">Volcanoes National Park, Rwanda</option>
+                  <option value="victoria-falls">Victoria Falls, Zimbabwe</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="package">Safari Package</label>
+                <select id="package" name="package">
+                  <option value="" disabled selected>— Select a package (optional) —</option>
+                  <option value="migration">The Great Migration Safari (10 Days)</option>
+                  <option value="gorilla">Gorilla &amp; Chimp Encounter (8 Days)</option>
+                  <option value="okavango-pkg">Okavango Water &amp; Wild (9 Days)</option>
+                  <option value="adventure">East African Adventure Trail (14 Days)</option>
+                  <option value="custom">Custom / Bespoke Itinerary</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="departureDate">Preferred Departure Date *</label>
+                <input type="date" id="departureDate" name="departureDate" required />
+              </div>
+              <div class="form-group">
+                <label for="returnDate">Preferred Return Date *</label>
+                <input type="date" id="returnDate" name="returnDate" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="adults">Number of Adults *</label>
+                <input type="number" id="adults" name="adults" min="1" max="30" placeholder="e.g. 2" required />
+              </div>
+              <div class="form-group">
+                <label for="children">Number of Children (under 12)</label>
+                <input type="number" id="children" name="children" min="0" max="20" placeholder="e.g. 0" value="0" />
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- ACCOMMODATION PREFERENCE -->
+          <fieldset class="form-fieldset">
+            <legend>Accommodation &amp; Budget</legend>
+            <div class="form-group" style="margin-bottom:1.4rem;">
+              <label>Accommodation Preference *</label>
+              <div class="radio-group" role="radiogroup" aria-label="Accommodation style">
+                <label class="radio-label" for="accBudget">
+                  <input type="radio" id="accBudget" name="accommodation" value="Budget" required />
+                  Budget (Tented Camps)
+                </label>
+                <label class="radio-label" for="accStandard">
+                  <input type="radio" id="accStandard" name="accommodation" value="Standard" />
+                  Standard (Mid-range Lodges)
+                </label>
+                <label class="radio-label" for="accLuxury">
+                  <input type="radio" id="accLuxury" name="accommodation" value="Luxury" />
+                  Luxury (5-Star Camps &amp; Lodges)
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- ADDITIONAL INFORMATION -->
+          <fieldset class="form-fieldset">
+            <legend>Additional Information</legend>
+            <div class="form-row">
+              <div class="form-group full">
+                <label for="specialReqs">Special Requirements or Interests</label>
+                <textarea id="specialReqs" name="specialReqs" placeholder="e.g. dietary needs, mobility considerations, specific wildlife interests, anniversary trip, photography focus…"></textarea>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="hearAbout">How Did You Hear About Us? *</label>
+                <select id="hearAbout" name="hearAbout" required>
+                  <option value="" disabled selected>— Select one —</option>
+                  <option value="social-media">Social Media</option>
+                  <option value="friend">Friend / Word of Mouth</option>
+                  <option value="online-search">Online Search</option>
+                  <option value="advertisement">Advertisement</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group" style="margin-top:0.5rem;">
+              <label class="consent-label" for="consent">
+                <input type="checkbox" id="consent" name="consent" required />
+                I consent to Summit Horizons Travel contacting me regarding this enquiry and storing my details securely in accordance with their privacy policy. *
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- FORM ACTIONS -->
+          <div class="form-actions">
+            <button type="reset" class="btn-reset">Reset Form</button>
+            <button type="submit" class="btn-submit">Submit Enquiry →</button>
+          </div>
+
+        </form>
+
+        <!-- SUCCESS MESSAGE (hidden by default) -->
+        <div id="successMsg" style="display:none;margin-top:2rem;padding:1.5rem 2rem;background:var(--forest);color:var(--sand);border-radius:var(--radius);font-size:0.95rem;line-height:1.7;">
+          <strong style="font-family:var(--font-display);font-size:1.3rem;display:block;margin-bottom:0.5rem;color:var(--gold-light);">Thank you — your enquiry has been received!</strong>
+          A specialist consultant will be in touch within 48 hours to begin crafting your personalised safari itinerary.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">Summit Horizons<span>Travel &amp; Safaris</span></div>
+        <p>Africa's finest safari specialists, crafting unforgettable journeys since 2008.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="packages.html">Safari Packages</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="booking.html">Book a Safari</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Destinations</h4>
+        <ul>
+          <li><a href="destinations.html">Tanzania</a></li>
+          <li><a href="destinations.html">Botswana</a></li>
+          <li><a href="destinations.html">Uganda</a></li>
+          <li><a href="destinations.html">Kenya</a></li>
+          <li><a href="destinations.html">Rwanda</a></li>
+          <li><a href="destinations.html">Zimbabwe</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <address>
+          Plot 14, Acacia Avenue<br>Kololo, Kampala, Uganda<br><br>
+          <a href="tel:+256700000000">+256 700 000 000</a><br>
+          <a href="mailto:info@summithorizons.travel">info@summithorizons.travel</a>
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Summit Horizons Travel. All rights reserved.</span>
+      <span>ATTA Accredited &nbsp;·&nbsp; IATA Bonded</span>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+
+    // Form submission (demo — no backend)
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      if (!this.checkValidity()) {
+        this.reportValidity();
+        return;
+      }
+      this.style.display = 'none';
+      document.getElementById('successMsg').style.display = 'block';
+      window.scrollTo({ top: document.getElementById('successMsg').offsetTop - 100, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
